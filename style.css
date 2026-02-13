@@ -290,3 +290,27 @@ button:hover {
   color: #333;
 }
 
+/* Fast box fade */
+.letter-box {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+
+.letter-box.active-box {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slower inner text reveal */
+.letter-box .reveal-inner {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.8s ease;
+}
+
+.letter-box .reveal-inner.active-inner {
+  opacity: 1;
+  transform: translateY(0);
+}
+
