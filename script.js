@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     heart.style.width = size + "px";
     heart.style.height = size + "px";
 
-    heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+    heart.style.animationDuration = (Math.random() * 3 + 6) + "s";
 
     heartsContainer.appendChild(heart);
     setTimeout(() => heart.remove(), 5000);
