@@ -8,10 +8,11 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.hero-content h1,
-.letter-card h2 {
-  font-family: 'Great Vibes', cursive;
+.hero-content h1 {
+  font-family: 'Cormorant Garamond', serif;
   font-size: 3.5rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .hero-content p,
