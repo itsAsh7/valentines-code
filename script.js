@@ -2,14 +2,7 @@ const beginBtn = document.getElementById("beginBtn");
 
 beginBtn.addEventListener("click", () => {
 
-  // Create hearts burst
-  for (let i = 0; i < 25; i++) {
-    setTimeout(() => {
-      createHeart();
-    }, i * 100);
-  }
-
-  // Fade out hero
+ // Fade out hero
   document.querySelector(".hero").style.transition = "opacity 0.8s ease";
   document.querySelector(".hero").style.opacity = "0";
 
@@ -37,6 +30,11 @@ window.addEventListener("scroll", () => {
 const heartsContainer = document.querySelector(".hearts-container");
 
 function createHeart() {
+  const heartsContainer = document.querySelector(".hearts-container");
+  if (!heartsContainer) {
+    return;
+  }
+
   const heart = document.createElement("div");
   heart.classList.add("heart");
 
@@ -58,4 +56,5 @@ function createHeart() {
     heart.remove();
   }, 5000);
 }
+
 
