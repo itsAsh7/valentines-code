@@ -49,4 +49,22 @@ beginBtn.addEventListener("click", () => {
 
 });
 
+  const letterBox = document.querySelector(".letter-box");
+const innerItems = document.querySelectorAll(".reveal-inner");
+
+setTimeout(() => {
+  if (letterBox) {
+    letterBox.classList.add("active-box");
+
+    setTimeout(() => {
+      innerItems.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add("active-inner");
+        }, index * 200);
+      });
+    }, 200);
+  }
+}, 500);
+
+
 });
