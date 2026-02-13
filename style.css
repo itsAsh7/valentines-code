@@ -84,6 +84,18 @@ body {
   filter: blur(40px);
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 button {
   margin-top: 40px;
   padding: 12px 30px;
@@ -214,11 +226,15 @@ button:hover {
   padding: 100px;
 }
 
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
 }
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
