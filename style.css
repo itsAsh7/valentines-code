@@ -189,3 +189,14 @@ button {
       0 0 10px rgba(236, 72, 153, 0.3);
   }
 }
+
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
