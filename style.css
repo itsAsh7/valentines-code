@@ -191,9 +191,10 @@ button {
 }
 
 .section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 1s ease;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section.show {
