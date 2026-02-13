@@ -34,8 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
  let heartInterval = null;
 
-let heartInterval = null;
-
 beginBtn.addEventListener("click", () => {
 
   if (heartInterval) return;
