@@ -217,7 +217,7 @@ button {
   bottom: -20px;
   width: 20px;
   height: 20px;
-  background: rgba(236, 72, 153, 0.4);
+  background: rgba(236, 72, 153, 0.8);
   transform: rotate(45deg);
   animation: floatUp 4s linear forwards;
 }
@@ -228,7 +228,7 @@ button {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(236, 72, 153, 0.4);
+  background: rgba(236, 72, 153, 0.8);
   border-radius: 50%;
 }
 
