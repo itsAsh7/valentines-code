@@ -70,3 +70,5 @@ beginBtn.addEventListener("click", () => {
   }, 700); // delay matches scroll timing
 
 });
+
+});
