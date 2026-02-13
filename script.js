@@ -34,37 +34,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
  let heartInterval = null;
 
+let heartInterval = null;
+
 beginBtn.addEventListener("click", () => {
 
-  if (heartInterval) return; // prevent multiple intervals
+  if (heartInterval) return;
 
+  // 💗 Start hearts
   heartInterval = setInterval(() => {
     createHeart();
-  }, 300); // one heart every 300ms
+  }, 300);
 
+  // 🔽 Scroll
   window.scrollTo({
     top: window.innerHeight,
     behavior: "smooth"
   });
 
-});
+  // 💌 Trigger letter animation AFTER scroll
+  setTimeout(() => {
 
-  const letterBox = document.querySelector(".letter-box");
-const innerItems = document.querySelectorAll(".reveal-inner");
+    const letterBox = document.querySelector(".letter-box");
+    const innerItems = document.querySelectorAll(".reveal-inner");
 
-setTimeout(() => {
-  if (letterBox) {
-    letterBox.classList.add("active-box");
+    if (letterBox) {
+      letterBox.classList.add("active-box");
 
-    setTimeout(() => {
-      innerItems.forEach((el, index) => {
-        setTimeout(() => {
-          el.classList.add("active-inner");
-        }, index * 200);
-      });
-    }, 200);
-  }
-}, 500);
+      setTimeout(() => {
+        innerItems.forEach((el, index) => {
+          setTimeout(() => {
+            el.classList.add("active-inner");
+          }, index * 200);
+        });
+      }, 200);
+    }
 
+  }, 700); // delay matches scroll timing
 
 });
