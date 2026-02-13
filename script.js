@@ -32,17 +32,21 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => heart.remove(), 5000);
   }
 
-  beginBtn.addEventListener("click", () => {
+ let heartInterval = null;
 
-    for (let i = 0; i < 25; i++) {
-      setTimeout(() => createHeart(), i * 100);
-    }
+beginBtn.addEventListener("click", () => {
 
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth"
-    });
+  if (heartInterval) return; // prevent multiple intervals
 
+  heartInterval = setInterval(() => {
+    createHeart();
+  }, 300); // one heart every 300ms
+
+  window.scrollTo({
+    top: window.innerHeight,
+    behavior: "smooth"
   });
+
+});
 
 });
