@@ -1,5 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  // 🔥 Reveal animation runs immediately
+  const reveals = document.querySelectorAll(".reveal");
+
+  setTimeout(() => {
+    reveals.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add("active");
+      }, index * 300);
+    });
+  }, 200);
+
   const beginBtn = document.getElementById("beginBtn");
   const heartsContainer = document.querySelector(".hearts-container");
 
@@ -23,26 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   beginBtn.addEventListener("click", () => {
 
-    // Heart burst
     for (let i = 0; i < 25; i++) {
       setTimeout(() => createHeart(), i * 100);
     }
 
-    // Smooth scroll only (no hero fade)
     window.scrollTo({
       top: window.innerHeight,
       behavior: "smooth"
-
-      const reveals = document.querySelectorAll(".reveal");
-
-setTimeout(() => {
-  reveals.forEach((el, index) => {
-    setTimeout(() => {
-      el.classList.add("active");
-    }, index * 300);
-  });
-}, 200);
-
     });
 
   });
