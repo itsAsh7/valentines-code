@@ -32,6 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({
       top: window.innerHeight,
       behavior: "smooth"
+
+      const reveals = document.querySelectorAll(".reveal");
+
+setTimeout(() => {
+  reveals.forEach((el, index) => {
+    setTimeout(() => {
+      el.classList.add("active");
+    }, index * 300);
+  });
+}, 200);
+
     });
 
   });
