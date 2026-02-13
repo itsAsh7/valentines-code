@@ -11,12 +11,16 @@ body {
 .hero-content h1,
 .letter-card h2 {
   font-family: 'Great Vibes', cursive;
-  font-size: 3.8rem; /* adjust bigger if you want stronger romantic feel */
+  font-size: 3.5rem;
 }
 
-.next-title {
-  font-family: 'Great Vibes', cursive;
+.hero-content p,
+.letter-card p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
 }
+
 
 /* Background Glow */
 .bg-glow {
