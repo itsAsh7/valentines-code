@@ -1,4 +1,4 @@
-* {
+    * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -119,43 +119,6 @@ button:hover {
   }
 }
 
-
-/* Hero Text Animation */
-.hero-content h1 span {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: textReveal 1s ease forwards;
-}
-
-.hero-content h1 span:nth-child(1) {
-  animation-delay: 0.5s;
-}
-
-.hero-content h1 span:nth-child(3) {
-  animation-delay: 1s;
-}
-
-.hero-content p {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: textReveal 1s ease forwards;
-  animation-delay: 1.4s;
-}
-
-button {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: textReveal 1s ease forwards;
-  animation-delay: 1.8s;
-}
-
-@keyframes textReveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* Subtle Glow Pulse */
 .highlight {
